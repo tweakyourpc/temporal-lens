@@ -2,11 +2,15 @@
 
 # Temporal Lens
 
-Ever almost replied to a "see you tomorrow!" message that was actually posted 8 months ago? Temporal Lens fixes that.
+Your brain reads "in two weeks" and thinks you have two weeks. But it was posted 10 days ago, so you have 4 days left. Temporal Lens shows you the truth at a glance.
+
+Ever almost replied to a "see you tomorrow!" message that was actually posted 8 months ago? Ever seen "deadline is in 3 days" in an old thread and had to do the date math yourself? Temporal Lens fixes that.
 
 ## The Problem
 
-Relative time references like "tomorrow," "next Friday," "in 3 days," and "this weekend" become meaningless when you read them later. Scrolling an old Discord thread, Reddit post, Slack archive, or forum, you cannot tell if "the deadline is in 3 days" already passed or is still coming. People reply to dead threads or miss live ones because they did the date math wrong in their head.
+Relative time references are written for the moment they were posted, but you often read them hours, days, or months later. Your brain naturally interprets "tomorrow," "next Friday," "in 3 days," and "this weekend" from right now, even when right now is not the timestamp that matters.
+
+That mismatch creates real mistakes. In a Discord thread, Reddit post, Slack archive, or forum, "the deadline is in 3 days" might mean "you still have time" or "you missed it last month." "Let's talk tomorrow" might be a live plan or a dead conversation. People reply to old threads, miss active ones, and make bad scheduling calls because the page shows the phrase but not the time context behind it.
 
 ## The Solution
 
