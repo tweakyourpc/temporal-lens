@@ -1,0 +1,51 @@
+:root {
+  --tl-chip-bg: rgba(88, 101, 242, 0.12);
+  --tl-chip-color: #4752c4;
+  --tl-chip-expired-bg: rgba(237, 66, 69, 0.12);
+  --tl-chip-expired-color: #c0393b;
+  --tl-chip-medium-bg: rgba(128, 128, 128, 0.1);
+  --tl-chip-medium-color: #888888;
+}
+
+.temporal-lens-annotation {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  margin: 0 1px;
+  vertical-align: baseline;
+}
+
+.temporal-lens-annotation .tl-original {
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  cursor: default;
+}
+
+.temporal-lens-annotation .tl-current {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.3em;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--tl-chip-bg);
+  color: var(--tl-chip-color);
+  font-size: 0.8em;
+  font-weight: 600;
+  line-height: 1.2;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.temporal-lens-annotation[data-confidence="medium"] .tl-current {
+  background: var(--tl-chip-medium-bg);
+  color: var(--tl-chip-medium-color);
+}
+
+.temporal-lens-annotation[data-expired="true"] .tl-current {
+  background: var(--tl-chip-expired-bg);
+  color: var(--tl-chip-expired-color);
+}
+
+body[data-tl-platform="slack"] .temporal-lens-annotation .tl-current {
+  border-radius: 8px;
+}

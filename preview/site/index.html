@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temporal Lens Preview</title>
+    <link rel="stylesheet" href="/styles/annotation.css" />
+    <link rel="stylesheet" href="/preview/site/site.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">Temporal Lens</p>
+        <h1>Smart timestamp annotation for browser chat surfaces.</h1>
+        <p class="lede">
+          This preview demonstrates the inline disclosure chip pattern and the live relative-time updates that
+          the extension will inject into Discord and Slack message DOM.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="/manifest.json" target="_blank" rel="noreferrer">Open manifest</a>
+          <a class="button button-secondary" href="/whoami" target="_blank" rel="noreferrer">Check /whoami</a>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <p class="section-label">Live Demo</p>
+            <h2>Sample annotated chat messages</h2>
+          </div>
+          <p class="section-meta" id="generated-at">Loading demo state...</p>
+        </div>
+        <div class="feed" id="demo-feed"></div>
+      </section>
+
+      <section class="panel grid">
+        <article>
+          <p class="section-label">Current MVP</p>
+          <ul>
+            <li>Background-worker based annotation flow with cache and settings.</li>
+            <li>Discord and Slack DOM targeting in the content script.</li>
+            <li>Confidence-aware inline chips with 60-second relative-time refresh.</li>
+          </ul>
+        </article>
+        <article>
+          <p class="section-label">Current limits</p>
+          <ul>
+            <li>This is a preview surface, not the extension injected into live chat pages.</li>
+            <li>The local backend is a conservative heuristic parser, not ONNX yet.</li>
+            <li>No bundler or browser packaging flow has been added yet.</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <script type="module" src="/preview/site/demo.js"></script>
+  </body>
+</html>

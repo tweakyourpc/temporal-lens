@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "Temporal Lens",
+  "version": "0.1.0",
+  "description": "Annotate natural-language time references on websites with live relative-time chips.",
+  "permissions": [
+    "storage",
+    "notifications"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Temporal Lens",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content/index.js"
+      ],
+      "css": [
+        "styles/annotation.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "components/*.js",
+        "content/*.js",
+        "utils/*.js",
+        "styles/*.css"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ]
+    }
+  ]
+}

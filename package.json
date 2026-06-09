@@ -1,0 +1,10 @@
+{
+  "name": "temporal-lens",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Manifest V3 browser extension that annotates natural-language time references in chat surfaces.",
+  "scripts": {
+    "preview": "node preview/dev/server.js"
+  }
+}
